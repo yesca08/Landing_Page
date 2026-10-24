@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Poeson · Invitaciones digitales, páginas web y redes sociales</title>
+<link rel="icon" type="image/x-icon" href="logo2.png">
+<meta name="description" content="Invitaciones web personalizadas, páginas para negocios y manejo de redes sociales en San Miguel, El Salvador.">
+<style>
+:root{--bg:#FFF8F1;--surface:#FFFFFF;--text:#0F2F2F;--muted:#3C5A5A;--line:#E6D9CC;--teal:#0F6E6E;--coral:#F26B4F;--btn:#0F6E6E;--on-btn:#FFFFFF;--soft:#CFE6E4;--pink:#FBD5CC;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1E1E;--surface:#132A2A;--text:#F3EEE6;--muted:#A9C4C1;--line:#24403F;--teal:#4CC2BA;--coral:#FF8A70;--btn:#4CC2BA;--on-btn:#06201F;--soft:#1D3F3E;--pink:#4A2A24;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1E1E;--surface:#132A2A;--text:#F3EEE6;--muted:#A9C4C1;--line:#24403F;--teal:#4CC2BA;--coral:#FF8A70;--btn:#4CC2BA;--on-btn:#06201F;--soft:#1D3F3E;--pink:#4A2A24;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;gap:10px;padding:18px 0;font-family:Georgia,serif;font-size:26px;font-weight:700}
+header b{color:var(--teal)}header i{color:var(--coral);font-style:normal}
+.hero{padding:36px 0 56px}
+.hero h1{font-size:clamp(34px,7vw,60px);max-width:14em}
+.hero h1 span{color:var(--coral)}
+.hero p{font-size:18px;color:var(--muted);max-width:34em}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;background:var(--btn);color:var(--on-btn);text-decoration:none;font-weight:600;border:2px solid var(--btn)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--line)}
+section{padding:48px 0}
+section h2{font-size:clamp(26px,5vw,38px)}
+.sub{color:var(--muted);max-width:36em;margin-bottom:28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h3{font-size:22px}
+.card ul{padding-left:18px;margin:0;color:var(--muted)}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 12px;border-radius:999px;background:var(--soft);color:var(--teal);margin-bottom:12px}
+.demo{background:var(--soft);border-radius:24px;padding:28px;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:center}
+.demo label{font-weight:600;display:block;margin-bottom:8px}
+.demo input{width:100%;font:inherit;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.inv{background:var(--surface);border:1.5px solid var(--teal);border-radius:16px;padding:26px 18px;text-align:center}
+.inv small{color:var(--muted)}
+.inv .n{font-family:Georgia,serif;font-size:30px;color:var(--teal);margin:6px 0;word-break:break-word}
+.inv .d{font-size:18px;letter-spacing:.06em}
+.inv a{display:inline-block;margin-top:14px;padding:10px 20px;border-radius:999px;background:var(--btn);color:var(--on-btn);text-decoration:none;font-weight:600;font-size:14px}
+.ex {
+  border-radius: 18px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--line);
+  overflow: hidden; /* Evita que el video sobresalga de las esquinas redondeadas */
+  padding: 0;        /* Se quita el padding interno para que el video llene toda la tarjeta */
+}
+
+/* Estilos para el video dentro de las tarjetas */
+.ex video {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  object-fit: cover; /* Recorta y adapta el video para llenar el contenedor sin distorsionarlo */
+  display: block;
+}
+
+.ex.a { background: var(--surface); color: var(--teal); }
+.ex.b { background: var(--coral); color: #fff; border-color: var(--coral); }
+.ex.c { background: var(--btn); color: var(--on-btn); border-color: var(--btn); }
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tiles div{aspect-ratio:1;border-radius:8px}
+.code{font-size:12px;word-break:break-all;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--muted);margin-bottom:12px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.chip{font:inherit;font-size:14px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}.chip.on{background:var(--btn);color:var(--on-btn);border-color:var(--btn)}
+.cap{font-size:14px;color:var(--muted);margin:8px 2px 0;text-align:center}
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.steps div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.steps div::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--coral);color:#fff;font-weight:700;margin-bottom:12px}
+.cta{text-align:center;background:var(--btn);color:var(--on-btn);border-radius:28px;padding:44px 20px}
+.cta .btn{background:var(--surface);color:var(--text);border-color:var(--surface);margin-top:12px}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:32px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<svg width="38" height="38" viewBox="50 70 120 120" aria-hidden="true"><rect x="50" y="70" width="120" height="120" rx="28" fill="#0F6E6E"/><rect x="64" y="86" width="70" height="54" rx="6" fill="#fff"/><line x1="64" y1="100" x2="134" y2="100" stroke="#0F6E6E" stroke-width="2"/><path d="M90 124C80 117 80 107 86 107C89 107 90 109 90 110C90 109 91 107 94 107C100 107 100 117 90 124Z" fill="#F26B4F"/><rect x="88" y="126" width="64" height="46" rx="6" fill="#F26B4F"/><path d="M88 133L120 154L152 133" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span><b>Po</b><i>eson</i></span>
+</header>
+
+<div class="hero">
+<h1>Tu evento y tu negocio, listos para <span>brillar.</span></h1>
+<p>Creamos invitaciones web personalizadas, páginas para negocios y manejamos tus redes sociales. Desde San Miguel, El Salvador.</p>
+<div class="btns"><a class="btn" data-wa href="#">Escríbenos por WhatsApp</a><a class="btn alt" href="#ejemplos">Ver ejemplos</a></div>
+</div>
+
+<section id="servicios">
+<h2>Lo que hacemos</h2>
+<p class="sub">Tres servicios para que tengas una presencia ordenada y profesional, sin complicarte.</p>
+<div class="grid">
+<div class="card"><span class="tag">Eventos</span><h3>Invitaciones web</h3><ul><li>Diseño personalizado con tus fotos y colores</li><li>Un enlace propio para cada invitado</li><li>Ubicación en el mapa y confirmación por WhatsApp</li></ul></div>
+<div class="card"><span class="tag">Negocios</span><h3>Páginas web</h3><ul><li>Tus servicios, horarios y ubicación en un solo lugar</li><li>Botón directo a tu WhatsApp</li><li>Se ve bien en el celular</li></ul></div>
+<div class="card"><span class="tag">Negocios</span><h3>Redes sociales</h3><ul><li>Diseño de publicaciones con identidad</li><li>Calendario mensual y programación</li><li>Perfil ordenado y respuestas básicas</li></ul></div>
+</div>
+</section>
+
+<section>
+<h2>Cada invitado, su propia invitación</h2>
+<p class="sub">Cada invitado recibe un enlace con su nombre y su número de pases. Toca un nombre para ver cómo cambia, o abre la invitación de ejemplo.</p>
+<div class="demo">
+<div><label>Así se ve el enlace de cada invitado</label><div class="code" id="lk"></div><div class="chips"><button class="chip on" data-n="Carlos Alvarenga" data-p="3">Carlos Alvarenga</button><button class="chip" data-n="María López" data-p="2">María López</button><button class="chip" data-n="Familia Hernández" data-p="4">Familia Hernández</button></div><a class="btn" id="go" target="_blank" rel="noopener" href="#">Abrir invitación de ejemplo</a></div>
+<div class="inv"><small>Con mucho cariño te invitamos</small><div class="n" id="vn">Carlos Alvarenga</div><div class="d">20 · 03 · 2027</div><small id="vp">3 pases</small><br><a data-wa data-msg="Hola, confirmo mi asistencia" href="#">Confirmar asistencia</a></div>
+</div>
+</section>
+
+<section id="ejemplos">
+  <h2>Ejemplos de diseño</h2>
+  <p class="sub">Muestras ilustrativas con datos ficticios, para que veas el estilo de nuestro trabajo.</p>
+  
+  <div class="grid">
+    <div>
+      <div class="ex a">
+        <video autoplay loop muted playsinline src="boda.mp4"></video>
+      </div>
+      <p class="cap">Boda</p>
+    </div>
+
+    <div>
+      <div class="ex b">
+        <video autoplay loop muted playsinline src="graduacion.mp4"></video>
+      </div>
+      <p class="cap">Graduación</p>
+    </div>
+
+    <div>
+      <div class="ex c">
+        <video autoplay loop muted playsinline src="cumple.mp4"></video>
+      </div>
+      <p class="cap">Cumpleaños</p>
+    </div>
+  </div>
+</section>
+
+</div>
+</section>
+
+<section>
+<h2>Así trabajamos</h2>
+<p class="sub">Un proceso simple y claro.</p>
+<div class="steps">
+<div><h3>Nos cuentas</h3>Tu evento o tu negocio, y lo que necesitas.</div>
+<div><h3>Diseñamos</h3>Te mostramos una propuesta y la ajustamos contigo.</div>
+<div><h3>Entregamos</h3>Recibes tu enlace, tu página o tu contenido listo para usar.</div>
+</div>
+</section>
+
+<section>
+<div class="cta">
+<h2>¿Hablamos de tu idea?</h2>
+<p>Escríbenos y te preparamos una cotización sin compromiso.</p>
+<a class="btn" data-wa href="#">Escribir por WhatsApp</a>
+</div>
+</section>
+
+<footer>© Poeson · San Miguel, El Salvador</footer>
+</div>
+<script>
+// Cambia aquí tu número de WhatsApp (código de país 503 + 8 dígitos, sin espacios)
+var WA="50377665881";
+document.querySelectorAll("[data-wa]").forEach(function(a){
+  var m=a.getAttribute("data-msg")||"Hola, quiero información sobre sus servicios";
+  a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(m);
+  a.target="_blank";a.rel="noopener";
+});
+var base="https://yesca08.github.io/ejemploreposemana12tec/";
+var o=document.getElementById("vn"),pp=document.getElementById("vp"),lk=document.getElementById("lk"),go=document.getElementById("go");
+function set(n,p){o.textContent=n;pp.textContent=p+(p==1?" pase":" pases");var u=base+"?nombre="+encodeURIComponent(n)+"&pases="+p;lk.textContent=u;go.href=u}
+document.querySelectorAll(".chip").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".chip").forEach(function(x){x.classList.remove("on")});b.classList.add("on");set(b.dataset.n,b.dataset.p)})});
+set("Carlos Alvarenga",3);
+</script>
+</body>
+</html>
