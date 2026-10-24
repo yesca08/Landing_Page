@@ -173,6 +173,25 @@ var o=document.getElementById("vn"),pp=document.getElementById("vp"),lk=document
 function set(n,p){o.textContent=n;pp.textContent=p+(p==1?" pase":" pases");var u=base+"?nombre="+encodeURIComponent(n)+"&pases="+p;lk.textContent=u;go.href=u}
 document.querySelectorAll(".chip").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".chip").forEach(function(x){x.classList.remove("on")});b.classList.add("on");set(b.dataset.n,b.dataset.p)})});
 set("Carlos Alvarenga",3);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll("#ejemplos video");
+  
+  videos.forEach(video => {
+    video.muted = true; // Asegura que esté silenciado por código
+    
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Si el navegador bloqueó la reproducción automática, 
+        // reproducir al primer toque/interacción del usuario
+        window.addEventListener('touchstart', () => {
+          video.play();
+        }, { once: true });
+      });
+    }
+  });
+});
 </script>
 </body>
 </html>
